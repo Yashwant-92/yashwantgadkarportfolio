@@ -475,7 +475,18 @@ export default function Home() {
     `);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="relative min-h-screen text-slate-900 dark:text-slate-100">
+      {/* gradient background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-br from-slate-50 via-cyan-50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950"
+      />
+      {/* soft glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(900px_circle_at_20%_10%,rgba(34,211,238,0.22),transparent_55%),radial-gradient(900px_circle_at_80%_20%,rgba(59,130,246,0.16),transparent_55%)] dark:bg-[radial-gradient(900px_circle_at_20%_10%,rgba(34,211,238,0.18),transparent_55%),radial-gradient(900px_circle_at_80%_20%,rgba(59,130,246,0.12),transparent_55%)]"
+      />
+
       {!loadingDone && <LoadingScreen onDone={() => setLoadingDone(true)} />}
 
       {/* NAV */}
