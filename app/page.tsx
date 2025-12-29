@@ -156,7 +156,7 @@ function LoadingScreen({ onDone }: { onDone: () => void }) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] grid place-items-center bg-slate-950 text-slate-100 transition-opacity duration-300",
+        "fixed inset-0 z-[100] grid place-items-center bg-slate-50 text-slate-900 transition-opacity duration-300",
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
       aria-label="Loading"
@@ -164,7 +164,7 @@ function LoadingScreen({ onDone }: { onDone: () => void }) {
     >
       <div className="px-6 text-center">
         <div
-          className="mx-auto inline-flex max-w-[900px] items-center justify-center rounded-2xl border border-emerald-400/20 bg-slate-900/40 px-5 py-4 shadow-[0_0_0_1px_rgba(16,185,129,0.08)] backdrop-blur"
+          className="mx-auto inline-flex max-w-[900px] items-center justify-center rounded-2xl border border-cyan-600/20 bg-white/80 px-5 py-4 shadow-[0_0_0_1px_rgba(8,145,178,0.10)] backdrop-blur"
           style={{
             fontFamily:
               "var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace",
@@ -172,21 +172,21 @@ function LoadingScreen({ onDone }: { onDone: () => void }) {
         >
           <span className="text-base sm:text-lg md:text-xl">
             {txt}
-            <span className="ml-0.5 inline-block w-[10px] animate-pulse text-emerald-300">
+            <span className="ml-0.5 inline-block w-[10px] animate-pulse text-cyan-600">
               |
             </span>
           </span>
         </div>
 
         <div className="mt-4 flex items-center justify-center gap-3">
-          <p className="text-xs text-slate-400">Loading portfolio…</p>
+          <p className="text-xs text-slate-500">Loading portfolio…</p>
           <button
             type="button"
             onClick={(e) => {
               e.stopPropagation();
               finish();
             }}
-            className="rounded-lg border border-emerald-400/20 bg-slate-900/30 px-2.5 py-1 text-xs text-slate-200 transition hover:border-emerald-400/45 hover:bg-slate-900/60"
+            className="rounded-lg border border-cyan-600/25 bg-white px-2.5 py-1 text-xs text-slate-800 transition hover:border-cyan-600/45 hover:bg-slate-50"
           >
             Skip
           </button>
@@ -212,7 +212,7 @@ function IconLink({
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noreferrer" : undefined}
-      className="group inline-flex items-center gap-2 rounded-xl border border-emerald-400/15 bg-slate-900/40 px-3 py-2 text-sm text-slate-100 transition hover:border-emerald-400/40 hover:bg-slate-900/70"
+      className="group inline-flex items-center gap-2 rounded-xl border border-cyan-600/20 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm transition hover:border-cyan-600/45 hover:bg-slate-50"
     >
       {icon ? (
         icon
@@ -224,7 +224,7 @@ function IconLink({
           className="h-5 w-5 opacity-90 transition group-hover:opacity-100"
         />
       )}
-      <span className="text-slate-200 group-hover:text-slate-50">{label}</span>
+      <span className="text-slate-900 group-hover:text-slate-950">{label}</span>
     </a>
   );
 }
@@ -280,7 +280,7 @@ export default function Home() {
         title: "Bio-Signal Based Cancer Detection System",
         description:
           "This project is a full-stack healthcare application designed to assist in early cancer risk detection using non-invasive bio-signals and behavioral data. The system analyzes multiple human parameters such as voice patterns, pulse signals, facial expressions, and motor movements, combined with patient medical records, to support data-driven health assessment. The backend is powered by Spring Boot REST APIs, enabling secure data processing, feature extraction, and structured patient record management. A responsive Angular frontend provides an intuitive interface with role-based authentication, consent-driven privacy controls, and interactive data visualization dashboards for better clinical insights.\n\nThe application emphasizes data security, scalability, and real-world healthcare compliance, making it suitable for early screening use cases and future AI/ML integration in medical diagnostics.",
-        image: "https://postimg.cc/QF35gxYT",
+        image: "https://postimg.cc/B8MQQyZK",
         github: "https://github.com/Yashwant-92",
       },
       {
@@ -352,26 +352,26 @@ export default function Home() {
   const skillItems = useMemo(
     () =>
       [
-        { name: "Java (Core & Advance)", icon: "https://cdn.simpleicons.org/java/10b981" },
-        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/10b981" },
-        { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/10b981" },
-        { name: "HTML", icon: "https://cdn.simpleicons.org/html5/10b981" },
-        { name: "CSS", icon: "https://cdn.simpleicons.org/css3/10b981" },
-        { name: "Angular", icon: "https://cdn.simpleicons.org/angular/10b981" },
-        { name: "Bootstrap", icon: "https://cdn.simpleicons.org/bootstrap/10b981" },
-        { name: "Spring Boot", icon: "https://cdn.simpleicons.org/springboot/10b981" },
-        { name: "Spring Security", icon: "https://cdn.simpleicons.org/springsecurity/10b981" },
-        { name: "RESTful APIs", icon: "https://cdn.simpleicons.org/fastapi/10b981" },
-        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/10b981" },
-        { name: "Hibernate", icon: "https://cdn.simpleicons.org/hibernate/10b981" },
-        { name: "Git", icon: "https://cdn.simpleicons.org/git/10b981" },
-        { name: "GitHub", icon: "https://cdn.simpleicons.org/github/10b981" },
-        { name: "Maven", icon: "https://cdn.simpleicons.org/apachemaven/10b981" },
-        { name: "Eclipse", icon: "https://cdn.simpleicons.org/eclipseide/10b981" },
-        { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/10b981" },
-        { name: "Render", icon: "https://cdn.simpleicons.org/render/10b981" },
-        { name: "Hostinger", icon: "https://cdn.simpleicons.org/hostinger/10b981" },
-        { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/10b981" },
+        { name: "Java (Core & Advance)", icon: "https://cdn.simpleicons.org/java/22d3ee" },
+        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/22d3ee" },
+        { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/22d3ee" },
+        { name: "HTML", icon: "https://cdn.simpleicons.org/html5/22d3ee" },
+        { name: "CSS", icon: "https://cdn.simpleicons.org/css3/22d3ee" },
+        { name: "Angular", icon: "https://cdn.simpleicons.org/angular/22d3ee" },
+        { name: "Bootstrap", icon: "https://cdn.simpleicons.org/bootstrap/22d3ee" },
+        { name: "Spring Boot", icon: "https://cdn.simpleicons.org/springboot/22d3ee" },
+        { name: "Spring Security", icon: "https://cdn.simpleicons.org/springsecurity/22d3ee" },
+        { name: "RESTful APIs", icon: "https://cdn.simpleicons.org/fastapi/22d3ee" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/22d3ee" },
+        { name: "Hibernate", icon: "https://cdn.simpleicons.org/hibernate/22d3ee" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/22d3ee" },
+        { name: "GitHub", icon: "https://cdn.simpleicons.org/github/22d3ee" },
+        { name: "Maven", icon: "https://cdn.simpleicons.org/apachemaven/22d3ee" },
+        { name: "Eclipse", icon: "https://cdn.simpleicons.org/eclipseide/22d3ee" },
+        { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/22d3ee" },
+        { name: "Render", icon: "https://cdn.simpleicons.org/render/22d3ee" },
+        { name: "Hostinger", icon: "https://cdn.simpleicons.org/hostinger/22d3ee" },
+        { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/22d3ee" },
       ] as const,
     []
   );
@@ -450,16 +450,16 @@ export default function Home() {
       <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700">
         <defs>
           <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-            <stop stop-color="#0b1220" offset="0"/>
-            <stop stop-color="#0f172a" offset="0.5"/>
-            <stop stop-color="#052e2b" offset="1"/>
+            <stop stop-color="#ffffff" offset="0"/>
+            <stop stop-color="#f1f5f9" offset="0.5"/>
+            <stop stop-color="#ecfeff" offset="1"/>
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#g)"/>
-        <text x="50%" y="50%" fill="#a7f3d0" font-family="Arial" font-size="34" text-anchor="middle">
+        <text x="50%" y="50%" fill="#0f172a" font-family="Arial" font-size="34" text-anchor="middle">
           Project Preview
         </text>
-        <text x="50%" y="56%" fill="#94a3b8" font-family="Arial" font-size="18" text-anchor="middle">
+        <text x="50%" y="56%" fill="#475569" font-family="Arial" font-size="18" text-anchor="middle">
           (If image link is not a direct image URL)
         </text>
       </svg>
@@ -469,13 +469,13 @@ export default function Home() {
     "data:image/svg+xml;utf8," +
     encodeURIComponent(`
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
-        <rect width="100%" height="100%" rx="14" ry="14" fill="#0b1220"/>
-        <path d="M20 44l8-24h8l8 24h-6l-1.6-5H27.6L26 44h-6Zm9.4-10h9.2L34 24.8 29.4 34Z" fill="#a7f3d0"/>
+        <rect width="100%" height="100%" rx="14" ry="14" fill="#ffffff"/>
+        <path d="M20 44l8-24h8l8 24h-6l-1.6-5H27.6L26 44h-6Zm9.4-10h9.2L34 24.8 29.4 34Z" fill="#0891b2"/>
       </svg>
     `);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="min-h-screen bg-slate-50 text-slate-900">
       {!loadingDone && <LoadingScreen onDone={() => setLoadingDone(true)} />}
 
       {/* NAV */}
@@ -485,7 +485,7 @@ export default function Home() {
           scrolled ? "top-4" : "bottom-4"
         )}
       >
-        <nav className="rounded-full border border-emerald-400/15 bg-slate-900/50 px-2 py-2 shadow-[0_0_0_1px_rgba(16,185,129,0.08)] backdrop-blur">
+        <nav className="rounded-full border border-cyan-600/20 bg-white/80 px-2 py-2 shadow-sm backdrop-blur">
           <ul className="flex flex-wrap items-center justify-center gap-1">
             {navItems.map((item) => (
               <li key={item.key}>
@@ -498,8 +498,8 @@ export default function Home() {
                   className={cn(
                     "rounded-full px-3 py-2 text-xs sm:text-sm transition active:scale-[0.97]",
                     active === item.key
-                      ? "bg-emerald-400/15 text-emerald-200"
-                      : "text-slate-200 hover:bg-slate-800/60 hover:text-slate-50"
+                      ? "bg-cyan-600/10 text-cyan-800"
+                      : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
                   )}
                 >
                   {item.label}
@@ -516,11 +516,11 @@ export default function Home() {
         <section
           id="home"
           data-reveal
-          className="reveal-hidden relative rounded-3xl border border-emerald-400/10 bg-slate-900/20 p-6 sm:p-10"
+          className="reveal-hidden relative rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10"
         >
           <div className="grid items-center gap-8 md:grid-cols-[1.35fr_0.65fr]">
             <div>
-              <p className="text-xs tracking-wider text-slate-400">
+              <p className="text-xs tracking-wider text-slate-500">
                 PORTFOLIO
               </p>
 
@@ -529,14 +529,14 @@ export default function Home() {
                 style={{ fontFamily: "var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial" }}
               >
                 Hi, I am{" "}
-                <span className="text-emerald-300">Yashwant</span>
+                <span className="text-cyan-700">Yashwant</span>
               </h1>
 
               <div className="mt-4 flex items-center gap-2">
-                <span className="text-sm text-slate-400">I am</span>
+                <span className="text-sm text-slate-600">I am</span>
                 <span
                   key={roleIndex}
-                  className="flip-in inline-flex rounded-xl border border-emerald-400/15 bg-slate-950/40 px-3 py-1.5 text-sm text-emerald-200"
+                  className="flip-in inline-flex rounded-xl border border-cyan-600/20 bg-cyan-50 px-3 py-1.5 text-sm text-cyan-900"
                   style={{
                     fontFamily:
                       "var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace",
@@ -547,7 +547,7 @@ export default function Home() {
               </div>
 
               <p
-                className="mt-5 max-w-2xl text-balance text-sm leading-6 text-slate-200 sm:text-base"
+                className="mt-5 max-w-2xl text-balance text-sm leading-6 text-slate-700 sm:text-base"
                 style={{ fontFamily: "var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial" }}
               >
                 Building clean, scalable products with a strong backend mindset and modern UI.
@@ -557,14 +557,14 @@ export default function Home() {
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
                   href="mailto:yashwantgadkar@gmail.com"
-                  className="inline-flex items-center justify-center rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center rounded-xl bg-cyan-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-500 active:scale-[0.98]"
                 >
                   yashwantgadkar@gmail.com
                 </a>
                 <button
                   type="button"
                   onClick={() => scrollToId("projects")}
-                  className="inline-flex items-center justify-center rounded-xl border border-emerald-400/25 bg-slate-900/30 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:border-emerald-400/50 hover:bg-slate-900/60 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center rounded-xl border border-cyan-600/25 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-cyan-600/45 hover:bg-slate-50 active:scale-[0.98]"
                 >
                   View Projects
                 </button>
@@ -572,9 +572,9 @@ export default function Home() {
             </div>
 
             <div className="mx-auto w-full max-w-[280px]">
-              <div className="conic-ring rounded-full bg-slate-950/40 p-1">
-                <div className="rounded-full bg-slate-950/60 p-2">
-                  <div className="relative aspect-square overflow-hidden rounded-full border border-emerald-400/10">
+              <div className="conic-ring rounded-full bg-white/40 p-1">
+                <div className="rounded-full bg-white/60 p-2">
+                  <div className="relative aspect-square overflow-hidden rounded-full border border-cyan-600/10">
                     <Image
                       src="https://i.postimg.cc/XJb2ZKPq/Whats-App-Image-2025-03-25-at-7-23-16-PM.jpg"
                       alt="Yashwant"
@@ -583,6 +583,7 @@ export default function Home() {
                       className="object-cover"
                       priority
                       quality={90}
+                      unoptimized
                     />
                   </div>
                 </div>
@@ -595,14 +596,14 @@ export default function Home() {
         <section
           id="about"
           data-reveal
-          className="reveal-hidden mt-10 rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10"
+          className="reveal-hidden mt-10 rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10"
         >
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               About
             </h2>
             <p
-              className="text-balance text-sm leading-7 text-slate-200 sm:text-base"
+              className="text-balance text-sm leading-7 text-slate-700 sm:text-base"
               style={{ fontFamily: "var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace" }}
             >
               {heroIntro}
@@ -612,12 +613,12 @@ export default function Home() {
               <IconLink
                 href="mailto:yashwantgadkar@gmail.com"
                 label="Email"
-                iconUrl="https://cdn.simpleicons.org/gmail/10b981"
+                iconUrl="https://cdn.simpleicons.org/gmail/22d3ee"
               />
               <IconLink
                 href="https://github.com/Yashwant-92"
                 label="GitHub"
-                iconUrl="https://cdn.simpleicons.org/github/10b981"
+                iconUrl="https://cdn.simpleicons.org/github/22d3ee"
               />
               <IconLink
                 href="http://www.linkedin.com/in/yashwant-gadkar-85361a220"
@@ -625,14 +626,14 @@ export default function Home() {
                 icon={
                   <Linkedin
                     aria-hidden="true"
-                    className="h-5 w-5 text-emerald-300/90 transition group-hover:text-emerald-200"
+                    className="h-5 w-5 text-cyan-600/90 transition group-hover:text-cyan-700"
                   />
                 }
               />
               <IconLink
                 href="https://www.instagram.com/yashwanttt_gadkar_0304/"
                 label="Instagram"
-                iconUrl="https://cdn.simpleicons.org/instagram/10b981"
+                iconUrl="https://cdn.simpleicons.org/instagram/22d3ee"
               />
             </div>
           </div>
@@ -640,7 +641,7 @@ export default function Home() {
 
         {/* ACADEMICS */}
         <section id="academics" data-reveal className="reveal-hidden mt-10">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Academics
             </h2>
@@ -649,20 +650,20 @@ export default function Home() {
               {academics.map((a) => (
                 <div
                   key={`${a.degree}-${a.year}`}
-                  className="group rounded-2xl border border-emerald-400/10 bg-slate-950/30 p-5 transition hover:-translate-y-0.5 hover:border-emerald-400/35 hover:bg-slate-950/50"
+                  className="group rounded-2xl border border-cyan-600/10 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-cyan-600/35 hover:bg-slate-100"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-base font-semibold text-slate-50">
+                      <p className="text-base font-semibold text-slate-900">
                         {a.degree}
                       </p>
-                      <p className="mt-1 text-xs text-slate-400">{a.year}</p>
+                      <p className="mt-1 text-xs text-slate-500">{a.year}</p>
                     </div>
-                    <span className="rounded-full bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
+                    <span className="rounded-full bg-cyan-600/10 px-3 py-1 text-xs text-cyan-800">
                       {a.score}
                     </span>
                   </div>
-                  <p className="mt-3 text-sm leading-6 text-slate-200">
+                  <p className="mt-3 text-sm leading-6 text-slate-700">
                     {a.institution}
                   </p>
                 </div>
@@ -673,7 +674,7 @@ export default function Home() {
 
         {/* SKILLS */}
         <section id="skills" data-reveal className="reveal-hidden mt-10">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Skills
             </h2>
@@ -683,8 +684,8 @@ export default function Home() {
                 <div
                   key={s.name}
                   className={cn(
-                    "rounded-2xl border border-emerald-400/10 bg-slate-950/30 px-4 py-4 transition",
-                    "hover:scale-[1.02] hover:border-emerald-400/35 hover:bg-slate-950/45 active:scale-[0.99]"
+                    "rounded-2xl border border-cyan-600/10 bg-slate-50 px-4 py-4 transition",
+                    "hover:scale-[1.02] hover:border-cyan-600/35 hover:bg-slate-100 active:scale-[0.99]"
                   )}
                 >
                   <div className="flex items-center gap-3">
@@ -699,7 +700,7 @@ export default function Home() {
                       }}
                     />
                     <div className="min-w-0">
-                      <p className="truncate text-sm font-semibold text-slate-50">
+                      <p className="truncate text-sm font-semibold text-slate-900">
                         {s.name}
                       </p>
                     </div>
@@ -712,7 +713,7 @@ export default function Home() {
 
         {/* PROJECTS */}
         <section id="projects" data-reveal className="reveal-hidden mt-10">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Projects
             </h2>
@@ -728,15 +729,15 @@ export default function Home() {
                 return (
                   <article
                     key={p.title}
-                    className="rounded-2xl border border-emerald-400/10 bg-slate-950/30 p-5 transition hover:border-emerald-400/30 hover:bg-slate-950/45"
+                    className="rounded-2xl border border-cyan-600/10 bg-slate-50 p-5 transition hover:border-cyan-600/30 hover:bg-slate-100"
                   >
                     <div className="grid gap-4 md:grid-cols-[180px_1fr]">
-                      <div className="overflow-hidden rounded-2xl border border-emerald-400/10 bg-slate-900/30">
+                      <div className="overflow-hidden rounded-2xl border border-cyan-600/10 bg-white">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={`/api/postimg?url=${encodeURIComponent(p.image)}`}
                           alt={p.title}
-                          className="block h-[140px] w-full bg-slate-950/40 object-contain"
+                          className="block h-[140px] w-full bg-slate-100 object-contain"
                           loading="lazy"
                           onError={(e) => {
                             const img = e.currentTarget;
@@ -746,11 +747,11 @@ export default function Home() {
                       </div>
 
                       <div>
-                        <h3 className="text-base font-semibold text-slate-50">
+                        <h3 className="text-base font-semibold text-slate-900">
                           {p.title}
                         </h3>
 
-                        <p className="mt-2 whitespace-pre-line text-sm leading-6 text-slate-200">
+                        <p className="mt-2 whitespace-pre-line text-sm leading-6 text-slate-700">
                           {expanded ? p.description : short}
                         </p>
 
@@ -763,7 +764,7 @@ export default function Home() {
                                 [idx]: !prev[idx],
                               }))
                             }
-                            className="rounded-xl border border-emerald-400/20 bg-slate-900/30 px-3 py-2 text-sm font-semibold text-emerald-200 transition hover:border-emerald-400/45 hover:bg-slate-900/60 active:scale-[0.98]"
+                            className="rounded-xl border border-cyan-600/20 bg-cyan-50 px-3 py-2 text-sm font-semibold text-cyan-800 transition hover:border-cyan-600/45 hover:bg-cyan-100 active:scale-[0.98]"
                           >
                             {expanded ? "Read less" : "Read more"}
                           </button>
@@ -772,7 +773,7 @@ export default function Home() {
                             href={p.github}
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-xl bg-emerald-400 px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 active:scale-[0.98]"
+                            className="rounded-xl bg-cyan-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-cyan-500 active:scale-[0.98]"
                           >
                             GitHub
                           </a>
@@ -788,7 +789,7 @@ export default function Home() {
 
         {/* CERTIFICATES */}
         <section id="certificates" data-reveal className="reveal-hidden mt-10">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Certificates
             </h2>
@@ -801,8 +802,8 @@ export default function Home() {
                   onClick={() => setOpenCert(c)}
                   className="group text-left"
                 >
-                  <div className="rounded-2xl border border-emerald-400/10 bg-slate-950/30 p-3 transition hover:scale-[1.01] hover:border-emerald-400/35 hover:bg-slate-950/45 active:scale-[0.99]">
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-emerald-400/10">
+                  <div className="rounded-2xl border border-cyan-600/10 bg-slate-50 p-3 transition hover:scale-[1.01] hover:border-cyan-600/35 hover:bg-slate-100 active:scale-[0.99]">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-cyan-600/10">
                       <Image
                         src={c.image}
                         alt={c.title}
@@ -810,13 +811,14 @@ export default function Home() {
                         sizes="(max-width: 1024px) 90vw, 380px"
                         className="object-cover"
                         quality={90}
+                        unoptimized
                       />
                     </div>
                     <div className="mt-3">
-                      <p className="text-sm font-semibold text-slate-50">
+                      <p className="text-sm font-semibold text-slate-900">
                         {c.title}
                       </p>
-                      <p className="text-xs text-slate-400">{c.issuer}</p>
+                      <p className="text-xs text-slate-500">{c.issuer}</p>
                     </div>
                   </div>
                 </button>
@@ -834,26 +836,26 @@ export default function Home() {
               onClick={() => setOpenCert(null)}
             >
               <div
-                className="w-full max-w-4xl overflow-hidden rounded-2xl border border-emerald-400/20 bg-slate-950"
+                className="w-full max-w-4xl overflow-hidden rounded-2xl border border-cyan-600/20 bg-white"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex items-center justify-between gap-3 border-b border-emerald-400/10 px-4 py-3">
+                <div className="flex items-center justify-between gap-3 border-b border-cyan-600/10 px-4 py-3">
                   <div>
-                    <p className="text-sm font-semibold text-slate-50">
+                    <p className="text-sm font-semibold text-slate-900">
                       {openCert.title}
                     </p>
-                    <p className="text-xs text-slate-400">{openCert.issuer}</p>
+                    <p className="text-xs text-slate-500">{openCert.issuer}</p>
                   </div>
                   <button
                     type="button"
                     onClick={() => setOpenCert(null)}
-                    className="rounded-xl border border-emerald-400/20 bg-slate-900/30 px-3 py-2 text-sm text-slate-100 transition hover:border-emerald-400/45 hover:bg-slate-900/60"
+                    className="rounded-xl border border-cyan-600/20 bg-slate-50 px-3 py-2 text-sm text-slate-900 transition hover:border-cyan-600/45 hover:bg-slate-100"
                   >
                     Close
                   </button>
                 </div>
 
-                <div className="relative aspect-[16/10] w-full bg-slate-950">
+                <div className="relative aspect-[16/10] w-full bg-white">
                   <Image
                     src={openCert.image}
                     alt={openCert.title}
@@ -862,6 +864,7 @@ export default function Home() {
                     className="object-contain"
                     quality={90}
                     priority
+                    unoptimized
                   />
                 </div>
               </div>
@@ -871,7 +874,7 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id="contact" data-reveal className="reveal-hidden mt-10">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 sm:p-10">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 shadow-sm sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
               Contact
             </h2>
@@ -879,11 +882,11 @@ export default function Home() {
             <div className="mt-6 grid gap-6 lg:grid-cols-2">
               <ContactForm />
 
-              <div className="rounded-2xl border border-emerald-400/10 bg-slate-950/30 p-5">
-                <p className="text-sm font-semibold text-slate-50">
+              <div className="rounded-2xl border border-cyan-600/10 bg-slate-50 p-5">
+                <p className="text-sm font-semibold text-slate-900">
                   Connect with me
                 </p>
-                <p className="mt-1 text-sm text-slate-300">
+                <p className="mt-1 text-sm text-slate-700">
                   Let's build something impactful.
                 </p>
 
@@ -891,12 +894,12 @@ export default function Home() {
                   <IconLink
                     href="https://www.instagram.com/yashwanttt_gadkar_0304/"
                     label="Instagram"
-                    iconUrl="https://cdn.simpleicons.org/instagram/10b981"
+                    iconUrl="https://cdn.simpleicons.org/instagram/22d3ee"
                   />
                   <IconLink
                     href="https://github.com/Yashwant-92"
                     label="GitHub"
-                    iconUrl="https://cdn.simpleicons.org/github/10b981"
+                    iconUrl="https://cdn.simpleicons.org/github/22d3ee"
                   />
                   <IconLink
                     href="http://www.linkedin.com/in/yashwant-gadkar-85361a220"
@@ -904,14 +907,14 @@ export default function Home() {
                     icon={
                       <Linkedin
                         aria-hidden="true"
-                        className="h-5 w-5 text-emerald-300/90 transition group-hover:text-emerald-200"
+                        className="h-5 w-5 text-cyan-600/90 transition group-hover:text-cyan-700"
                       />
                     }
                   />
                   <IconLink
                     href="mailto:yashwantgadkar@gmail.com"
                     label="Email"
-                    iconUrl="https://cdn.simpleicons.org/gmail/10b981"
+                    iconUrl="https://cdn.simpleicons.org/gmail/22d3ee"
                   />
                 </div>
               </div>
@@ -921,8 +924,8 @@ export default function Home() {
 
         {/* FOOTER (shows at the end) */}
         <footer data-reveal className="reveal-hidden mt-10 pb-6">
-          <div className="rounded-3xl border border-emerald-400/10 bg-slate-900/10 p-6 text-center">
-            <p className="text-sm text-slate-300">
+          <div className="rounded-3xl border border-cyan-600/15 bg-white p-6 text-center shadow-sm">
+            <p className="text-sm text-slate-700">
               © {new Date().getFullYear()} Yashwant Gadkar • Built with Next.js
             </p>
           </div>
@@ -949,52 +952,48 @@ function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-2xl border border-emerald-400/10 bg-slate-950/30 p-5"
+      className="rounded-2xl border border-cyan-600/10 bg-slate-50 p-5"
     >
-      <p className="text-sm font-semibold text-slate-50">Send a message</p>
+      <p className="text-sm font-semibold text-slate-900">Send a message</p>
 
       <div className="mt-4 grid gap-3">
         <label className="grid gap-1 text-sm">
-          <span className="text-slate-300">Your name</span>
+          <span className="text-slate-700">Your name</span>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="rounded-xl border border-emerald-400/10 bg-slate-950/60 px-3 py-2 text-slate-50 outline-none transition focus:border-emerald-400/45"
+            className="rounded-xl border border-cyan-600/10 bg-white px-3 py-2 text-slate-900 outline-none transition focus:border-cyan-600/45"
             placeholder="Enter your name"
           />
         </label>
 
         <label className="grid gap-1 text-sm">
-          <span className="text-slate-300">Your email</span>
+          <span className="text-slate-700">Your email</span>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="rounded-xl border border-emerald-400/10 bg-slate-950/60 px-3 py-2 text-slate-50 outline-none transition focus:border-emerald-400/45"
+            className="rounded-xl border border-cyan-600/10 bg-white px-3 py-2 text-slate-900 outline-none transition focus:border-cyan-600/45"
             placeholder="Enter your email"
           />
         </label>
 
         <label className="grid gap-1 text-sm">
-          <span className="text-slate-300">Your message</span>
+          <span className="text-slate-700">Your message</span>
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="min-h-[120px] resize-y rounded-xl border border-emerald-400/10 bg-slate-950/60 px-3 py-2 text-slate-50 outline-none transition focus:border-emerald-400/45"
+            className="min-h-[120px] resize-y rounded-xl border border-cyan-600/10 bg-white px-3 py-2 text-slate-900 outline-none transition focus:border-cyan-600/45"
             placeholder="Write your message..."
           />
         </label>
 
         <button
           type="submit"
-          className="mt-1 inline-flex items-center justify-center rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300 active:scale-[0.98]"
+          className="mt-1 inline-flex items-center justify-center rounded-xl bg-cyan-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-cyan-500 active:scale-[0.98]"
         >
           Send
         </button>
-
-        <p className="text-xs text-slate-500">
-          This uses your email app (mailto) to send the message.
-        </p>
       </div>
     </form>
   );
